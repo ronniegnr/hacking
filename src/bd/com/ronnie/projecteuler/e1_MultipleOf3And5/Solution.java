@@ -22,5 +22,3 @@ public class Solution {
         return (factor * numberCount * (numberCount + 1)) / 2;
     }
 }
-// test comment
-
