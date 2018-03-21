@@ -1,4 +1,4 @@
-//package com.ronniegnr.arrays.twodarray;
+package bd.com.ronnie.hackerrank.datastructures.arrays.twodarrays;
 
 import java.util.Scanner;
 

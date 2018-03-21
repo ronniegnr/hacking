@@ -1,3 +1,5 @@
+package bd.com.ronnie.hackerrank.datastructures.arrays.leftrotation;
+
 import java.util.Scanner;
 
 class Solution {

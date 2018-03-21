@@ -1,3 +1,4 @@
+package bd.com.ronnie.hackerrank.datastructures.linkedlists;
 
 // this node will be used for both single and double linked list.
 // for single linked list, we will not assign any value to Node.prev

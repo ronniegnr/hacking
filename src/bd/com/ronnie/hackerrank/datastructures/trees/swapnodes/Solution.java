@@ -1,8 +1,9 @@
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+package bd.com.ronnie.hackerrank.datastructures.trees.swapnodes;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 class Node {
     protected Node left;

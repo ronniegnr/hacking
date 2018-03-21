@@ -1,3 +1,5 @@
+package bd.com.ronnie.hackerrank.datastructures.arrays.sparsearrays;
+
 import java.util.Scanner;
 
 public class Solution {
