@@ -1,4 +1,4 @@
-package bd.com.ronnie.hackerrank.datastructures.twodarrays;
+package bd.com.ronnie.hackerrank.datastructures.twodarrays_ds;
 
 import java.util.Scanner;
 
@@ -28,3 +28,5 @@ public class Solution {
     }
 
 }
+
+// https://www.hackerrank.com/challenges/2d-array/problem

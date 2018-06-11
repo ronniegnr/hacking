@@ -6,43 +6,36 @@ import java.util.Scanner;
 
 public class Solution {
 
-    private static int lastAns = 0;
-    private static List<List<Integer>> seqList;
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int N = scanner.nextInt();
-        int Q = scanner.nextInt();
 
-        int[][] input = new int[Q][3];
-        for (int i = 0; i < Q; i++) {
-            for (int j = 0; j < 3; j++) {
-                input[i][j] = scanner.nextInt();
-            }
+        int lastAnswer = 0;
+        int n = scanner.nextInt();
+        int q = scanner.nextInt();
+
+        List<List<Integer>> lists = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            List<Integer> list = new ArrayList<>();
+            lists.add(list);
         }
 
-        seqList = new ArrayList<>();
-        for (int i = 0; i < N; i++) {
-            seqList.add(new ArrayList<Integer>());
-        }
-
-        for (int i = 0; i < Q; i++) {
-            if(input[i][0] == 1) {
-                QueryOne(input[i][1], input[i][2], N);
+        for (int i = 0; i < q; i++) {
+            int query = scanner.nextInt();
+            int x = scanner.nextInt();
+            int y = scanner.nextInt();
+            int seq = (x ^ lastAnswer) % n;
+            List<Integer> currentList = lists.get(seq);
+            if (query == 1) {
+                currentList.add(y);
             } else {
-                QueryTwo(input[i][1], input[i][2], N);
+                lastAnswer = currentList.get(y % currentList.size());
+                System.out.println(lastAnswer);
             }
         }
 
+        scanner.close();
     }
 
-    private static void QueryOne(int x, int y, int N) {
-        seqList.get((x^lastAns) % N).add(y);
-    }
-
-    public static void QueryTwo(int x, int y, int N) {
-        List<Integer> seq = seqList.get((x^lastAns) % N);
-        lastAns = seq.get(y%seq.size());
-        System.out.println(lastAns + " ");
-    }
 }
+
+// https://www.hackerrank.com/challenges/dynamic-array/problem

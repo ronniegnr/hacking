@@ -21,6 +21,8 @@ public class Solution {
                 .collect(Collectors.toCollection(LinkedList::new))
                 .descendingIterator()
                 .forEachRemaining(item -> System.out.print(item + " "));
+
+        scanner.close();
     }
 
 }
