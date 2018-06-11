@@ -1,4 +1,4 @@
-package bd.com.ronnie.hackerrank.datastructures.arraysds;
+package bd.com.ronnie.hackerrank.datastructures.arrays_ds;
 
 import java.util.Arrays;
 import java.util.LinkedList;
