@@ -1,22 +1,26 @@
 package bd.com.ronnie.hackerrank.datastructures.arraysds;
 
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Solution {
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
+        Scanner scanner = new Scanner(System.in);
 
-        int arr[] = new int[n];
+        int n = scanner.nextInt();
+        Integer arr[] = new Integer[n];
 
         for (int i = 0; i < n; i++) {
-            arr[i] = in.nextInt();
+            arr[i] = scanner.nextInt();
         }
 
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[arr.length - i - 1] + " ");
-        }
+        Arrays.stream(arr)
+                .collect(Collectors.toCollection(LinkedList::new))
+                .descendingIterator()
+                .forEachRemaining(item -> System.out.print(item + " "));
     }
 
 }
