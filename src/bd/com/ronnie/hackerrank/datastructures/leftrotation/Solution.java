@@ -2,22 +2,28 @@ package bd.com.ronnie.hackerrank.datastructures.leftrotation;
 
 import java.util.Scanner;
 
-class Solution {
+public class Solution {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
-        int arrayLength = scanner.nextInt();
-        int leftRotation = scanner.nextInt();
 
-        int[] array = new int[arrayLength];
-        int opr;
-        for(int i=0; i<arrayLength; i++) {
-            opr = i - leftRotation;
-            array[opr>-1 ? opr : opr+arrayLength] = scanner.nextInt();
+        int n = scanner.nextInt();
+        int d = scanner.nextInt();
+
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
         }
 
-        for(int i=0; i<arrayLength; i++) {
-            System.out.print(array[i] + " ");
+        for (int i = d, j = 0; j < n; i++, j++) {
+            if (i == n) {
+                i = 0;
+            }
+            System.out.print(arr[i] + " ");
         }
-    }        
+
+        scanner.close();
+    }
+
 }

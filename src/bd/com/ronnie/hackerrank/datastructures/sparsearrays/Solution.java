@@ -3,33 +3,36 @@ package bd.com.ronnie.hackerrank.datastructures.sparsearrays;
 import java.util.Scanner;
 
 public class Solution {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
 
-        String[] arrString = new String[n];
-        for(int i=0; i<n; i++) {
-            arrString[i] = scanner.next();
+        int n = scanner.nextInt();
+        String[] strings = new String[n];
+        for (int i = 0; i < n; i++) {
+            strings[i] = scanner.next();
         }
-    
+
         int q = scanner.nextInt();
-        String strQuery;
-        int[] result = new int[q];
-        int count=0;
-        for(int i=0; i<q; i++) {
-            strQuery = scanner.next();
-            for(int j=0; j<n; j++) {
-                if(strQuery.equals(arrString[j])) {
-                    count++;
+        String[] queries = new String[q];
+        for (int i = 0; i < q; i++) {
+            queries[i] = scanner.next();
+        }
+
+        int[] results = new int[q];
+        for (int i = 0; i < q; i++) {
+            for (int j = 0; j < n; j++) {
+                if (queries[i].equals(strings[j])){
+                    results[i]++;
                 }
             }
-            result[i] = count;
-            count = 0;
         }
 
-        for(int i=0; i<q; i++) {
-            System.out.println(result[i]);
+        for (int result : results) {
+            System.out.println(result);
         }
-
     }
+
 }
+
+// https://www.hackerrank.com/challenges/sparse-arrays/problem
