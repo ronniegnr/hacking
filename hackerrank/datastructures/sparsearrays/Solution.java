@@ -31,6 +31,7 @@ public class Solution {
         for (int result : results) {
             System.out.println(result);
         }
+
     }
 
 }

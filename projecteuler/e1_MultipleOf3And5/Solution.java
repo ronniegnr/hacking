@@ -21,4 +21,5 @@ public class Solution {
         int numberCount = (n - 1) / factor;
         return (factor * numberCount * (numberCount + 1)) / 2;
     }
+
 }
