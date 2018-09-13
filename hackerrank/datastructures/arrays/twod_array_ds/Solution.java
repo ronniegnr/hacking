@@ -1,5 +1,3 @@
-package bd.com.ronnie.hackerrank.datastructures.twodarrays_ds;
-
 import java.util.Scanner;
 
 public class Solution {

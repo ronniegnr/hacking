@@ -1,5 +1,3 @@
-package bd.com.ronnie.hackerrank.datastructures.leftrotation;
-
 import java.util.Scanner;
 
 public class Solution {
