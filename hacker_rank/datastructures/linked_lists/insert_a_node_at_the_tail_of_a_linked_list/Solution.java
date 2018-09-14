@@ -27,10 +27,10 @@ public class Solution {
         linkedList.head = node1;
         node1.next = node2;
 
-
-        insertNodeAtTail(node1, 100);
-
-        printLinkedList(node1);
+        // testing the solution  method
+        printLinkedList(
+            insertNodeAtTail(linkedList.head, 5)
+        );
     }
 
     // Solution method of the problem
@@ -50,7 +50,6 @@ public class Solution {
             }
             node.next = newNode;
         }
-        
         return head;
     }
 
