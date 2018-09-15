@@ -1,4 +1,4 @@
-
+package bd.com.ronnie.hacking.hacker_rank.data_structures.linked_lists.insert_a_node_at_a_specific_position;
 
 public class Solution {
 
@@ -41,27 +41,34 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        
         // generate the linked list
         SinglyLinkedList sll = new SinglyLinkedList();
         sll = insert(sll, 16);
         sll = insert(sll, 13);
         sll = insert(sll, 11);
 
-        // testing the solution method
+        // testing the solution
         printLinkedList(
-            insertNodeAtHead(sll.head, 100)
+            insertNodeAtPosition(sll.head, 3, 2)
         );
     }
 
     // solution method
-    static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode head, int data) {
-        SinglyLinkedListNode node = new SinglyLinkedListNode(data);
+    static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position) {
+        SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
         if(head != null) {
-            node.next = head;
+            SinglyLinkedListNode node = head;
+            for (int i = 0; i < position-1; i++) {
+                if(node.next == null) {
+                    break;
+                } else {
+                    node = node.next;
+                }
+            }
+            newNode.next = node.next;
+            node.next = newNode;
         }
-        head = node;
-        return node;
+        return head;
     }
 
     static void printLinkedList(SinglyLinkedListNode head) {

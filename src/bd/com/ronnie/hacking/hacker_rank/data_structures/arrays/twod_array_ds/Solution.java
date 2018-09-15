@@ -1,3 +1,5 @@
+package bd.com.ronnie.hacking.hacker_rank.data_structures.arrays.twod_array_ds;
+
 import java.util.Scanner;
 
 public class Solution {

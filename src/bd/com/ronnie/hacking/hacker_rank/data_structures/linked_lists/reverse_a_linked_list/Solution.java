@@ -1,4 +1,4 @@
-
+package bd.com.ronnie.hacking.hacker_rank.data_structures.linked_lists.reverse_a_linked_list;
 
 public class Solution {
 
@@ -6,7 +6,7 @@ public class Solution {
         public int data;
         public SinglyLinkedListNode next;
 
-        public SinglyLinkedListNode(int data) {
+        SinglyLinkedListNode(int data) {
             this.data = data;
             next = null;
         }
@@ -14,9 +14,9 @@ public class Solution {
 
     static class SinglyLinkedList {
         public SinglyLinkedListNode head;
-        public SinglyLinkedListNode tail;
+        SinglyLinkedListNode tail;
 
-        public SinglyLinkedList() {
+        SinglyLinkedList() {
             this.head = null;
             this.tail = null;
         }
@@ -49,26 +49,27 @@ public class Solution {
 
         // testing the solution
         printLinkedList(
-            insertNodeAtPosition(sll.head, 3, 2)
+            reverse(sll.head)
         );
     }
 
     // solution method
-    static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position) {
-        SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
-        if(head != null) {
+    static SinglyLinkedListNode reverse(SinglyLinkedListNode head) {
+        if(head == null || head.next == null) {
+            return head;
+        } else {
             SinglyLinkedListNode node = head;
-            for (int i = 0; i < position-1; i++) {
-                if(node.next == null) {
-                    break;
-                } else {
-                    node = node.next;
-                }
+            SinglyLinkedListNode nextNode = head.next;
+            SinglyLinkedListNode temp;
+            while(nextNode != null) {
+                temp = nextNode.next;
+                nextNode.next = node;
+                node = nextNode;
+                nextNode = temp;
             }
-            newNode.next = node.next;
-            node.next = newNode;
+            head.next = null;
+            return node;
         }
-        return head;
     }
 
     static void printLinkedList(SinglyLinkedListNode head) {
