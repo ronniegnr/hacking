@@ -25,12 +25,13 @@ public class Solution {
     /**
      * insert node to the LinkedList sequentially.
      * this method is used to generate the LinkedList quickly.
+     *
      * @param sll
      * @param data
      */
     static SinglyLinkedList insert(SinglyLinkedList sll, int data) {
         SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
-        if(sll.head == null) { // no item in the LinkedList
+        if (sll.head == null) { // no item in the LinkedList
             sll.head = newNode;
             sll.tail = newNode;
         } else {
@@ -41,7 +42,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        
+
         // generate the linked list
         SinglyLinkedList sll = new SinglyLinkedList();
         sll = insert(sll, 16);
@@ -50,14 +51,14 @@ public class Solution {
 
         // testing the solution method
         printLinkedList(
-            insertNodeAtHead(sll.head, 100)
+                insertNodeAtHead(sll.head, 100)
         );
     }
 
     // solution method
     static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode head, int data) {
         SinglyLinkedListNode node = new SinglyLinkedListNode(data);
-        if(head != null) {
+        if (head != null) {
             node.next = head;
         }
         head = node;

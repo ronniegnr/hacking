@@ -29,7 +29,7 @@ public class Solution {
 
         // testing the solution  method
         printLinkedList(
-            insertNodeAtTail(linkedList.head, 5)
+                insertNodeAtTail(linkedList.head, 5)
         );
     }
 
@@ -38,11 +38,11 @@ public class Solution {
         SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
         SinglyLinkedListNode node = head;
 
-        if(head == null) {
+        if (head == null) {
             head = newNode;
         } else {
-            while(true) {
-                if(node.next == null) {
+            while (true) {
+                if (node.next == null) {
                     break;
                 } else {
                     node = node.next;
