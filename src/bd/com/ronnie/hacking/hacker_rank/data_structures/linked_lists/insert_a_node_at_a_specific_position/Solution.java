@@ -1,4 +1,4 @@
-package bd.com.ronnie.hacking.hacker_rank.data_structures.linked_lists.insert_a_node_at_a_specific_position;
+package bd.com.ronnie.hacking.hackerrank.data_structures.linked_lists.insert_a_node_at_a_specific_position;
 
 public class Solution {
 

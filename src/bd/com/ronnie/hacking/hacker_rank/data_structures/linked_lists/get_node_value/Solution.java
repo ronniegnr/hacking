@@ -1,4 +1,4 @@
-package bd.com.ronnie.hacking.hacker_rank.data_structures.linked_lists.get_node_value;
+package bd.com.ronnie.hacking.hackerrank.data_structures.linked_lists.get_node_value;
 
 public class Solution {
 

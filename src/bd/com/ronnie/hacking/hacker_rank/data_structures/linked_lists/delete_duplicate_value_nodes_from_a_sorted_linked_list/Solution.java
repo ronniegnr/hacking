@@ -1,4 +1,4 @@
-package bd.com.ronnie.hacking.hacker_rank.data_structures.linked_lists.delete_duplicate_value_nodes_from_a_sorted_linked_list;
+package bd.com.ronnie.hacking.hackerrank.data_structures.linked_lists.delete_duplicate_value_nodes_from_a_sorted_linked_list;
 
 public class Solution {
 

@@ -1,4 +1,4 @@
-package bd.com.ronnie.hacking.hacker_rank.data_structures.arrays.dynamic_array;
+package bd.com.ronnie.hacking.hackerrank.data_structures.arrays.dynamic_array;
 
 import java.util.ArrayList;
 import java.util.List;

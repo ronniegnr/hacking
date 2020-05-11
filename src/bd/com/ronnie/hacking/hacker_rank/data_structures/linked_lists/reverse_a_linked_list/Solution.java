@@ -1,4 +1,4 @@
-package bd.com.ronnie.hacking.hacker_rank.data_structures.linked_lists.reverse_a_linked_list;
+package bd.com.ronnie.hacking.hackerrank.data_structures.linked_lists.reverse_a_linked_list;
 
 public class Solution {
 

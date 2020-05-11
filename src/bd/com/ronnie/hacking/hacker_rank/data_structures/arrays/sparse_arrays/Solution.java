@@ -1,4 +1,4 @@
-package bd.com.ronnie.hacking.hacker_rank.data_structures.arrays.sparse_arrays;
+package bd.com.ronnie.hacking.hackerrank.data_structures.arrays.sparse_arrays;
 
 import java.util.Scanner;
 

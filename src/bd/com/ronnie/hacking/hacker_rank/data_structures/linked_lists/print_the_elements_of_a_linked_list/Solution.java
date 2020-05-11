@@ -1,4 +1,4 @@
-package bd.com.ronnie.hacking.hacker_rank.data_structures.linked_lists.print_the_elements_of_a_linked_list;
+package bd.com.ronnie.hacking.hackerrank.data_structures.linked_lists.print_the_elements_of_a_linked_list;
 
 public class Solution {
 

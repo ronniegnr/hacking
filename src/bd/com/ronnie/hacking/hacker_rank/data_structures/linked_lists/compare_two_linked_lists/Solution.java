@@ -1,4 +1,4 @@
-package bd.com.ronnie.hacking.hacker_rank.data_structures.linked_lists.compare_two_linked_lists;
+package bd.com.ronnie.hacking.hackerrank.data_structures.linked_lists.compare_two_linked_lists;
 
 public class Solution {
 
