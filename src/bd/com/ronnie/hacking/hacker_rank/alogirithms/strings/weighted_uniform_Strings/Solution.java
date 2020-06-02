@@ -1,8 +1,10 @@
 package bd.com.ronnie.hacking.hacker_rank.alogirithms.strings.weighted_uniform_Strings;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Solution {
     public static void main(String[] args) {
@@ -14,21 +16,22 @@ public class Solution {
             queries[i] = scanner.nextInt();
         }
 
-        System.out.println(weightedUniformStrings(input, queries));
+//        System.out.println(weightedUniformStrings(input, queries));
+        String[] result = weightedUniformStrings(input, queries);
+        for (String s : result) {
+            System.out.println(s);
+        }
     }
 
     static String[] weightedUniformStrings(String s, int[] queries) {
         List<Integer> queriesL = new ArrayList<>();
-        List<String> results = new ArrayList<>();
-        for (int query : queries) {
-            queriesL.add(query);
-            results.add("No");
-        }
+        Set<String> results = new HashSet<>();
 
         for (int i = 0, j = 0; i < s.length(); ) {
             if (s.charAt(i) == s.charAt(j)) {
                 int weight = (s.charAt(i) - 96) * (i - j + 1);
                 if (queriesL.contains(weight)) {
+//                    results.ad
                     results.set(queriesL.indexOf(weight), "Yes");
                 }
                 i++;
@@ -44,6 +47,7 @@ public class Solution {
 
         return resultsS;
     }
+
 }
 
 // https://www.hackerrank.com/challenges/weighted-uniform-string/problem
