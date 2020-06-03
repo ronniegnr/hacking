@@ -32,7 +32,7 @@ public class Solution {
                 int weight = (s.charAt(i) - 96) * (i - j + 1);
                 if (queriesL.contains(weight)) {
 //                    results.ad
-                    results.set(queriesL.indexOf(weight), "Yes");
+//                    results.set(queriesL.indexOf(weight), "Yes");
                 }
                 i++;
             } else {
@@ -42,7 +42,7 @@ public class Solution {
 
         String[] resultsS = new String[queries.length];
         for (int i = 0; i < results.size(); i++) {
-            resultsS[i] = results.get(i);
+//            resultsS[i] = results.get(i);
         }
 
         return resultsS;
