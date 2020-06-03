@@ -39,3 +39,6 @@ public class Solution {
         return result;
     }
 }
+
+
+// https://www.hackerrank.com/challenges/gem-stones/problem
