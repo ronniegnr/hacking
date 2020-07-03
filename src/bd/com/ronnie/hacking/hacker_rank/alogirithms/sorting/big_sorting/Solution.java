@@ -12,21 +12,34 @@ public class Solution {
         }
 
         String[] sorted = bigSorting(unsorted);
+        for (int i = 0; i < sorted.length; i++) {
+            System.out.println(sorted[i]);
+        }
     }
 
     static String[] bigSorting(String[] unsorted) {
-        String[] sorted = new String[unsorted.length];
-
         for (int i = 0; i < unsorted.length; i++) {
-            for (int j = 0; j < unsorted.length; j++) {
+            for (int j = i + 1; j < unsorted.length; j++) {
                 if (unsorted[i].length() > unsorted[j].length()) {
-
+                    String temp = unsorted[i];
+                    unsorted[i] = unsorted[j];
+                    unsorted[j] = temp;
                 } else if (unsorted[i].length() == unsorted[j].length()) {
-                    
+                    for (int k = 0; k < unsorted[i].length(); k++) {
+                        int a = unsorted[i].charAt(k);
+                        int b = unsorted[j].charAt(k);
+                        if (a == b) {
+                            continue;
+                        } else if (a > b) {
+                            String temp = unsorted[i];
+                            unsorted[i] = unsorted[j];
+                            unsorted[j] = temp;
+                        }
+                        break;
+                    }
                 }
             }
         }
-
-        return sorted;
+        return unsorted;
     }
 }
