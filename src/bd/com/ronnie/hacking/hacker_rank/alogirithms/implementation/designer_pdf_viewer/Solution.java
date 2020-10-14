@@ -9,16 +9,14 @@ public class Solution {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int[] h = new int[200];
-        /*for (int i = 0; i < 26; i++) {
+        for (int i = 0; i < 26; i++) {
             h[i] = scanner.nextInt();
         }
 
-        String word = scanner.next();*/
+        String word = scanner.next();
 
-
-        h = new int[]{1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7};
-        String word = "zaba";
-
+        /*h = new int[]{1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7};
+        String word = "zaba";*/
 
         System.out.println(designerPdfViewer(h, word));
     }
