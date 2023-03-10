@@ -1,6 +1,7 @@
 package bd.com.ronnie.hacking.leetcode.valid_parentheses.Solution;
 
 import java.util.Scanner;
+import java.util.Stack;
 
 public class Solution {
     public static void main(String[] args) {
@@ -10,36 +11,18 @@ public class Solution {
     }
 
     public static boolean isValid(String s) {
-        int a = 0, b = 0, c = 0;
+        Stack<Character> stack = new Stack<>();
 
         for (int i = 0; i < s.length(); i++) {
-            switch (s.charAt(i)) {
-                case '(':
-                    a++;
-                    break;
-                case ')':
-                    a--;
-                    break;
-                case '{':
-                    b++;
-                    break;
-                case '}':
-                    b--;
-                    break;
-                case '[':
-                    c++;
-                    break;
-                case ']':
-                    c--;
-                    break;
+            char c = s.charAt(i);
+            if (!stack.empty() && (c - 1 == stack.peek() || c - 2 == stack.peek())) {
+                stack.pop();
+            } else {
+                stack.push(c);
             }
         }
 
-        if (a == 0 && b == 0 && c == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return stack.empty();
     }
 
 }
