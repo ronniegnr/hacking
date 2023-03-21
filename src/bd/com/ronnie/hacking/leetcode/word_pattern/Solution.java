@@ -17,14 +17,25 @@ public class Solution {
         String[] strs = s.split(" ");
         Map<Character, String> map = new HashMap<>();
 
+        if (strs.length != pattern.length()) {
+            result = false;
+            return result;
+        }
+
         for (int i = 0; i < pattern.length(); i++) {
             char c = pattern.charAt(i);
-            if (!map.containsValue(strs[i])) {
-                map.put(c, strs[i]);
-            } else {
-                if (!(strs[i]).equals(map.get(c))) {
+            String str = strs[i];
+            if (map.containsValue(str)) {
+                if (!str.equals(map.get(c))) {
                     result = false;
                     break;
+                }
+            } else {
+                if (map.containsKey(c)) {
+                    result = false;
+                    break;
+                } else {
+                    map.put(c, str);
                 }
             }
         }
