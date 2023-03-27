@@ -1,4 +1,4 @@
-package bd.com.ronnie.hacking.hacker_rank.alogirithms.strings.Pangrams;
+package bd.com.ronnie.hacking.hacker_rank.alogirithms.strings.pangrams;
 
 import java.util.HashMap;
 import java.util.Map;
