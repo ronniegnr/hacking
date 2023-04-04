@@ -1,11 +1,8 @@
 package bd.com.ronnie.hacking.leetcode.first_unique_character_in_a_string;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.SortedMap;
-import java.util.TreeMap;
 
 public class Solution {
     public static void main(String[] args) {
