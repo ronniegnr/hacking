@@ -1,4 +1,4 @@
-package bd.com.ronnie.hacking.leetcode.valid_parentheses.Solution;
+package bd.com.ronnie.hacking.leetcode.valid_parentheses;
 
 import java.util.Scanner;
 import java.util.Stack;
