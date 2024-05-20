@@ -16,8 +16,8 @@ public class Solution {
         }
 
         for (String s : strs) {
-            if(s.length() > 10) {
-                System.out.println("" + s.charAt(0) + (s.length()-2)  + s.charAt(s.length() - 1));
+            if (s.length() > 10) {
+                System.out.println("" + s.charAt(0) + (s.length() - 2) + s.charAt(s.length() - 1));
             } else {
                 System.out.println(s);
             }
