@@ -31,7 +31,7 @@ public class Solution {
             } else {
                 j--;
             }
-            if (foundFromFirst == true && foundFromLast == true) {
+            if (foundFromFirst && foundFromLast) {
                 char c = s.charAt(i);
                 sb.setCharAt(i, sb.charAt(j));
                 sb.setCharAt(j, c);
