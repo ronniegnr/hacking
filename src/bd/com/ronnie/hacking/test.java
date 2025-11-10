@@ -10,6 +10,6 @@ public class test {
         }
         String key = new String(Arrays.toString(hash));
 
-        System.out.println(key);
+        System.out.println(key);;
     }
  }
