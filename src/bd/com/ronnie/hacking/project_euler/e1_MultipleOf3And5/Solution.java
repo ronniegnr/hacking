@@ -11,7 +11,7 @@ public class Solution {
 
         for (int a0 = 0; a0 < t; a0++) {
             int n = in.nextInt();
-            n = n - 1;
+            n = n - 1; 
 
             long start = System.nanoTime();
 
@@ -20,7 +20,7 @@ public class Solution {
             long executionTime = end - start;
             System.out.println("Execution time: " + executionTime + "ns");
 
-            System.out.println(sum);
+            System.out.println(sum);;
         }
 
     }
